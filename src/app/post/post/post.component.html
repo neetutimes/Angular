@@ -1,0 +1,11 @@
+<p>
+  post works!
+</p>
+<div *ngFor = "let rows of rowsData;let i=index">
+    <span (click) = "postSelected(rows.title)">{{rows.title}}</span>
+</div>
+<app-modal id="postModal">
+    <h1>Post</h1>
+    <h4>Content: {{selectedPost}}</h4>
+    <button class="btn btn-primary" (click)="closeModal('postModal');"  data-dismiss="true">Close</button>
+</app-modal>
